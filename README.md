@@ -168,7 +168,7 @@ This activity will help you practice using GitHub to push your changes to a GitH
 5. **Push the Changes**
    - Push the branch to GitHub:
      ```bash
-     git push origin feature/add-java-class
+     git push
      ```
 
 
