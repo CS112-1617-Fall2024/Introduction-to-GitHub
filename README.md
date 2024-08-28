@@ -245,8 +245,8 @@ This activity will help you practice using GitHub to create and manage a new Jav
            Animal animal = (Animal) obj;
            return species.equals(animal.species);
        }
-   }
-   ```
+      }
+      ```
 
 6. **Stage the New Java Class**
    - Stage the new `Animal.java` file:
