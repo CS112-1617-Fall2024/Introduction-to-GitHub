@@ -88,14 +88,6 @@ GitHub Explore is a great place to do just that … explore :smile: You can find
 
 You can check out the GitHub Explore website [at github.com/explore](https://github.com/explore). The more you interact with GitHub the more tailored your Explore view will be. 
 
-## 📝 Optional next steps 
-
-* Open a pull request and let your teacher know that you’ve finished this course.  
-* Create a new markdown file in this repository. Let them know what you learned and what you are still confused about! Experiment with different styles!
-* Create your profile README. Let the world know a little bit more about you! What are you interested in learning? What are you working on? What's your favorite hobby? Learn more about creating your profile README in the document, ["Managing Your Profile README"](https://docs.github.com/en/github/setting-up-and-managing-your-github-profile/managing-your-profile-readme).
-* Go to your user dashboard and create a new repository. Experiment with the features within that repository to familiarize yourself with them. 
-* [Let us know what you liked or didn’t like about the content of this course](https://support.github.com/contact/education). What would you like to see more of? What would be interesting or helpful to your learning journey? 
-
 ## 📚  Resources 
 * [A short video explaining what GitHub is](https://www.youtube.com/watch?v=w3jLJU7DT5E&feature=youtu.be) 
 * [Git and GitHub learning resources](https://docs.github.com/en/github/getting-started-with-github/git-and-github-learning-resources) 
@@ -105,3 +97,179 @@ You can check out the GitHub Explore website [at github.com/explore](https://git
 * [GitHub's Learning Lab](https://lab.github.com/)
 * [Education community forum](https://education.github.community/)
 * [GitHub community forum](https://github.community/)
+
+# GitHub Workflow Practice # 1
+
+# Objective
+This activity will help you practice using GitHub to push your changes to a GitHub repository, a skill that will be essential for completing the labs.
+
+## Steps
+
+1. **Open GitHub Codespaces**
+   - In the current repository, click `Code` and select `Open with Codespaces` to start a new Codespace.
+
+2. **Create a New Java Class**
+   - Create a new file named `Person.java` in the repository directory.
+   - Define a simple `Person` class with an instance variable and methods as follows:
+
+     ```java
+     public class Person {
+         private String name;
+         
+         // Default constructor
+         public Person() {
+             this.name = "Unknown";
+         }
+         
+         // Full constructor
+         public Person(String name) {
+             this.name = name;
+         }
+
+         // Getter
+         public String getName() {
+             return name;
+         }
+
+         // Setter
+         public void setName(String name) {
+             this.name = name;
+         }
+
+         // toString method
+         @Override
+         public String toString() {
+             return "Person [name=" + name + "]";
+         }
+
+         // equals method
+         @Override
+         public boolean equals(Object obj) {
+             if (this == obj) return true;
+             if (obj == null || getClass() != obj.getClass()) return false;
+             Person person = (Person) obj;
+             return name.equals(person.name);
+         }
+     }
+     ```
+
+3. **Stage the New Java Class**
+   - Stage the new `Person.java` file:
+     ```bash
+     git add Person.java
+     ```
+
+4. **Commit the Changes**
+   - Commit the changes with a descriptive message:
+     ```bash
+     git commit -m "Add Person class with constructors, getters, setters, and toString method"
+     ```
+
+5. **Push the Changes**
+   - Push the branch to GitHub:
+     ```bash
+     git push origin feature/add-java-class
+     ```
+
+
+# GitHub Workflow Practice # 2
+
+# Objective
+This activity will help you practice using GitHub to create and manage a new Java class, push changes, and maintain version control through a GitHub repository, a skill that will be essential for completing your project
+
+## Steps
+
+1. **Create a Repository**
+   - Go to GitHub and create a new repository named `java-practice-repo`.
+   - Initialize it with a README file.
+
+2. **Open GitHub Codespaces**
+   - In the `java-practice-repo` repository, click `Code` and select `Open with Codespaces` to start a new Codespace.
+
+3. **Clone the Repository**
+   - If not automatically cloned, clone the repository in Codespaces:
+     ```bash
+     git clone https://github.com/your-username/java-practice-repo.git
+     ```
+   - Navigate to the repository directory:
+     ```bash
+     cd java-practice-repo
+     ```
+
+4. **Create a New Branch**
+   - Create and switch to a new branch named `feature/add-java-class`:
+     ```bash
+     git checkout -b feature/add-java-class
+     ```
+
+5. **Create a New Java Class**
+   - Create a new file named `Animal.java` in the repository directory.
+   - Define a simple `Person` class with an instance variable and methods as follows:
+
+     ```java
+     public class Animal {
+       // Instance variable
+       private String species;
+
+       // Default constructor
+       public Animal() {
+           this.species = "Unknown";
+       }
+
+       // Full constructor
+       public Animal(String species) {
+           this.species = species;
+       }
+
+       // Getter method
+       public String getSpecies() {
+           return species;
+       }
+
+       // Setter method
+       public void setSpecies(String species) {
+           this.species = species;
+       }
+
+       // toString method
+       @Override
+       public String toString() {
+           return "Animal [species=" + species + "]";
+       }
+
+       // equals method
+       @Override
+       public boolean equals(Object obj) {
+           if (this == obj) return true;
+           if (obj == null || getClass() != obj.getClass()) return false;
+           Animal animal = (Animal) obj;
+           return species.equals(animal.species);
+       }
+   }
+   ```
+
+6. **Stage the New Java Class**
+   - Stage the new `Animal.java` file:
+     ```bash
+     git add Animal.java
+     ```
+
+7. **Commit the Changes**
+   - Commit the changes with a descriptive message:
+     ```bash
+     git commit -m "Add Animal class with constructors, getters, setters, and toString method"
+     ```
+
+8. **Push the Changes**
+   - Push the branch to GitHub:
+     ```bash
+     git push origin feature/add-java-class
+     ```
+9. **Create a Pull Request**
+
+   - On GitHub, create a pull request to merge the feature/add-animal-class branch into the master branch
+   - Add a description if needed and click Create pull request
+
+10. **Review and Merge**
+    
+    - Review the pull request. If everything looks good, merge the feature/add-animal-class branch into the master branch.
